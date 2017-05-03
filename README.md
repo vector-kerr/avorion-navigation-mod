@@ -14,6 +14,23 @@ A mod for the game Avorion to provide Navigation features.
 * Yet to add multi-waypoint and/or navigation path feature
 * Yet to add in-space-ui marker pointing to target sector
 
+## Installation
+Copy the files from `src/scripts` here to the corresponding folders in `Avorion/data/scripts` in your Avorion installation path.
+
+No existing files are overwritten so you should not experience any conflicts.
+
+
+## Setup
+Once you have installed the files, you will also need to add permissions to execute the `/navigate` command.
+This is done on a per-galaxy basis. To make this change (probably while your galaxy isn't running):
+
+1. Find the save folder for your galaxy (e.g., on Windows, %appdata%/Avorion/galaxies/<your_galaxy_name)
+2. Make a backup copy of `admin.xml`, just in case :)
+3. Edit the `admin.xml` file with a plain text editor such as [Notepad++](https://notepad-plus-plus.org/)
+4. Under the `/Administration/administration/defaultAuthorizationGroup/commands` element, add the following new command: `<command name="navigate" />`
+5. Save and exit
+
+
 ## Usage
 Invoke `/navigate` in the chat window to set your Faction's waypoint to your current sector.
 
